@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="記録アプリ">
+<meta name="theme-color" content="#0f6b5c">
+<meta name="robots" content="noindex">
+<title>記録アプリ（笑声×クリエイト）</title>
+<style>
+  html, body { margin:0; height:100%; background:#f5f7f6; }
+  iframe { position:fixed; inset:0; width:100%; height:100%; border:0; }
+  p { font-family:-apple-system,"Hiragino Sans",sans-serif; text-align:center; color:#667067; margin-top:40vh; }
+</style>
+</head>
+<body>
+<!-- 記録アプリ（笑声×クリエイト）の入口。本体は Google Apps Script。ここから開くと Google のログイン状態に左右されずに開ける -->
+<script>
+// LINE の中のブラウザでは印刷がうまく動かないので、外のブラウザ（Chrome・Safari）で開き直す
+(function () {
+  if (/ Line\//i.test(navigator.userAgent) && !/openExternalBrowser=1/.test(location.search)) {
+    location.replace(location.pathname + '?openExternalBrowser=1');
+  }
+})();
+</script>
+<p>読み込み中…<br><small>LINEから開いたときは、Chrome・Safariで開き直します</small></p>
+<iframe src="https://script.google.com/macros/s/AKfycbz2VXPS-X3OZzxoCEbWVhfUF6kGuF7K174x6nA0k_sGtef9tnWxuDPT7azmKjlfzd3nsg/exec" title="記録アプリ（笑声×クリエイト）"></iframe>
+</body>
+</html>
